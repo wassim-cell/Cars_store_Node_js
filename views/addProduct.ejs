@@ -1,0 +1,107 @@
+<%- include('base/header.ejs') %>
+<br><br><br><br>
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>add Product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css4/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section" ><h1>add Lamborghini !</h1></h2>
+				</div>
+				<br>
+			</div>
+			<br><br>
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<div class="wrapper img" style="background-image: url(images4/img1.jpg);">
+						<div class="row">
+							<div class="col-md-9 col-lg-7">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">add any Car you want !</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				              Thank you!
+				      		</div>
+									<form method="POST" action="/addProduct" enctype="multipart/form-data" >
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Title</label>
+													<input type="text" class="form-control" name="title" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Price</label>
+													<input type="number" class="form-control" name="price"  placeholder="Price">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Author</label>
+													<input type="text" class="form-control" name="author"  placeholder="Author">
+												</div>
+											</div>
+											<br><br>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Rente price per Day </label>
+													<input type="number" class="form-control" name="rente"  placeholder="Rente price per Day">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="#">Discription</label>
+													<textarea name="Discription" class="form-control"  cols="30" rows="4" placeholder="Discription"></textarea>
+												</div>
+											</div>
+                                            
+                                            <div class="col-md-12">
+												<div class="form-group" >
+                                                    
+													<label >Image</label> <br>
+													<input type="file"  name="image" placeholder="Image">
+                                                    
+												</div>
+											</div>
+											 <br> <br>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="add Product" class="btn btn-primary">
+													
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js4/jquery.min.js"></script>
+  <script src="js4/popper.js"></script>
+ 
+  <script src="js4/jquery.validate.min.js"></script>
+  <script src="js4/main.js"></script>
+
+	</body>
+</html>
+<%- include('base/footer.ejs') %>
+

@@ -1,0 +1,35 @@
+<%- include('base/header.ejs') %>
+<br><br><br><br><br><br><br><br>
+<% for (let car of cars ) { %>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row d_flex">
+                <div class="col-md-4">
+                         <a href="/Details/<%= car._id %>">
+                            <figure><img src="/uploads/<%= car.image %>" width="320px" height="220px" style="margin-bottom: 40px;bottom:80px"  alt="#"/></figure>
+                         </a>
+                      </div>
+                      <div class="col-md-8">
+                         <div class="store_box ">
+                        
+                            <h3> <%= car.title %> </h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages</p>
+                            <div> Price : $<%= car.price %></div> 
+                            <div> Rente price : $<%= car.rente %> per Day</div>
+                            <a class="read_more" href="#">Read more</a>
+                         </div>
+                      
+                      </div>
+             </div>
+        </div>
+    </div>
+    
+</div>
+<% } %>
+
+<%- include('base/footer.ejs') %>
+<style>
+
+
+</style>

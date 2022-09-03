@@ -1,0 +1,108 @@
+<%- include('base/header.ejs') %>
+<br><br><br><br><br><br><br>
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>add Product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css4/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section" ><h1>update Lamborghini !</h1></h2>
+				</div>
+				<br>
+			</div>
+			<br><br>
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<div class="wrapper img" style="background-image: url(/images4/img1.jpg);">
+						<div class="row">
+							<div class="col-md-9 col-lg-7">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">add any Car you want !</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				              Thank you!
+				      		</div>
+									<form method="POST" action="/myCars/update" enctype="multipart/form-data" >
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="name">Title</label>
+													<input type="text" class="form-control" name="title" value="<%= car.title %>" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Price</label>
+													<input type="number" class="form-control" name="price" value="<%= car.price %>"  placeholder="Price">
+												</div>
+											</div>
+                                            <input type="hidden" name="idCar" value="<%= car._id %>">
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Author</label>
+													<input type="text" class="form-control" name="author" value="<%= car.author %>" placeholder="Author">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<label class="label" for="email">Rente price</label>
+													<input type="text" class="form-control" name="rente" value="<%= car.rente %>" placeholder="Author">
+												</div>
+											</div>
+											<input type="hidden" name="oldImage" value="<%= car.image %>">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="#">Discription</label>
+													<textarea name="Discription" class="form-control"  cols="30" rows="4" placeholder="Discription"><%= car.discription %></textarea>
+												</div>
+											</div>
+                                            <img src="/uploads/<%= car.image %>" width="120px" height="120px" />
+                                            <div class="col-md-12">
+												<div class="form-group" >
+                                                    
+													<label >Image</label> <br>
+													<input type="file"  name="image" placeholder="Image">
+                                                    
+												</div>
+											</div>
+											 <br> <br>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="update Car" class="btn btn-primary">
+													
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js4/jquery.min.js"></script>
+  <script src="js4/popper.js"></script>
+  <script src="js4/bootstrap.min.js"></script>
+  <script src="js4/jquery.validate.min.js"></script>
+  <script src="js4/main.js"></script>
+
+	</body>
+</html>
+<%- include('base/footer.ejs') %>
+
